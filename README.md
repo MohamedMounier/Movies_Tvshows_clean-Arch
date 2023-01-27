@@ -1,16 +1,6 @@
 # to_watch_app
 
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+an application to see top movies and tv shows ,fetching them from tmdb api
+, also the most popular and the most recent playing ones by using bloc and clean archtiecture.
+here is few screens of the app.![movieDetailsScreen](https://user-images.githubusercontent.com/86453565/215152609-d154157c-ddf3-4240-b91d-edb4431dedd4.jpeg)
+![MoviesScreen](https://user-images.githubusercontent.com/86453565/215152614-eec1880b-d085-418f-a9bb-32dce8c889e7.jpeg)
