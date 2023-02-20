@@ -8,6 +8,7 @@ import 'package:to_watch_app/movies/data/datasource/api_consts.dart';
 import 'package:to_watch_app/movies/presentation/controller/movie_bloc.dart';
 import 'package:to_watch_app/movies/presentation/screens/movie_detail_screen.dart';
 import 'package:to_watch_app/tv/presentation/controller/tv_bloc/tv_bloc.dart';
+import 'package:to_watch_app/tv/presentation/controller/tv_bloc/tv_state.dart';
 
 class PopularTvShowsComponent extends StatelessWidget {
   const PopularTvShowsComponent({Key? key}) : super(key: key);
