@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_watch_app/core/utils/services/service_locator.dart';
 import 'package:to_watch_app/movies/presentation/screens/movies_screen.dart';
+import 'package:to_watch_app/tv/presentation/screens/tv_shows_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      home: const MainMoviesScreen(),
+      home: const TvShowsScreen(),
     );
   }
 }

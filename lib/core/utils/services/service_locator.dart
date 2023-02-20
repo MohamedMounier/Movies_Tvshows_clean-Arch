@@ -9,6 +9,11 @@ import 'package:to_watch_app/movies/domain/usecasses/get_movie_recommend_usecase
 import 'package:to_watch_app/movies/domain/usecasses/get_movies_top_rated_usecase.dart';
 import 'package:to_watch_app/movies/presentation/controller/movie_bloc.dart';
 import 'package:to_watch_app/movies/presentation/controller/movie_details_bloc.dart';
+import 'package:to_watch_app/tv/data/datasource/tv_remote_data_source.dart';
+import 'package:to_watch_app/tv/data/repository/tv_repo.dart';
+import 'package:to_watch_app/tv/domain/repository/base_tv_rep.dart';
+import 'package:to_watch_app/tv/domain/usecasses/get_popular_tv_use_case.dart';
+import 'package:to_watch_app/tv/presentation/controller/tv_bloc/tv_bloc.dart';
 
 final sl=GetIt.instance;
 
@@ -17,6 +22,7 @@ class ServiceLocator{
     ///blocs
     sl.registerFactory(() => MovieBloc(sl(), sl(), sl()));
     sl.registerFactory(() => MovieDetailsBloc(sl(), sl()));
+    sl.registerFactory(() => TvBloc(sl()));
 
     ///useCases
     sl.registerLazySingleton<GetNowPlayingMoviesUseCase>(() => GetNowPlayingMoviesUseCase(sl()));
@@ -25,10 +31,15 @@ class ServiceLocator{
     sl.registerLazySingleton<GetMovieDetailsUseCase>(() => GetMovieDetailsUseCase(sl()));
     sl.registerLazySingleton<GetMovieRecommendationsUseCase>(() => GetMovieRecommendationsUseCase(sl()));
 
+
+    sl.registerLazySingleton<GetPopularTvsUseCase>(() => GetPopularTvsUseCase(sl()));
+
     ///Repository
     sl.registerLazySingleton<BaseMovieRepo>(() => MovieRepository(sl()));
+    sl.registerLazySingleton<BaseTvRepo>(() => TvRepo(sl()));
 
     ///DataSource
     sl.registerLazySingleton<BaseMovieRemoteDataSource>(() => MovieRemoteDataSource());
+    sl.registerLazySingleton<BaseTvRemoteDataSource>(() => TvRemoteDataSource());
   }
 }
